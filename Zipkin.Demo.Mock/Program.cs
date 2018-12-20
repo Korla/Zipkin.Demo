@@ -1,6 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using SEB.Logging;
-using SEB.Logging.DotnetCore;
+using Microsoft.Extensions.Logging;
 using Serilog;
 using Serilog.Sinks.Elasticsearch;
 using System;
@@ -13,25 +12,23 @@ namespace zipkin
     {
       var log = new LoggerConfiguration()
         .Enrich.FromLogContext()
-        .MinimumLevel.Override("Microsoft", Serilog.Events.LogEventLevel.Information)
-        .MinimumLevel.Override("System", Serilog.Events.LogEventLevel.Information)
         .WriteTo.Console()
         .WriteTo.Elasticsearch(new ElasticsearchSinkOptions(new Uri("http://localhost:9200"))
         {
           AutoRegisterTemplate = true,
           AutoRegisterTemplateVersion = AutoRegisterTemplateVersion.ESv6,
-          IndexFormat = "test3-{0:yyyy.MM.dd}"
+          IndexFormat = "zipkin-{0:yyyy.MM.dd}"
         })
         .CreateLogger();
       Log.Logger = log;
-      log.Information("A Serilog log");
       var serviceCollection = new ServiceCollection();
-      serviceCollection
-        .AddLogging()
-        .AddTransient<ILogService, LogService>();
+      serviceCollection.AddLogging(c => c.AddSerilog());
       var serviceProvider = serviceCollection.BuildServiceProvider();
-      var logger = serviceProvider.GetService<ILogService>();
-      logger.WriteErrorLog("A Microsoft log");
+      var logger = serviceProvider.GetService<Microsoft.Extensions.Logging.ILogger<Program>>();
+      using (logger.BeginScope("{@scope}", new { value1 = "A value", value2 = "Another value" }))
+      {
+        logger.LogInformation("A Microsoft log");
+      }
       Log.CloseAndFlush();
     }
   }
