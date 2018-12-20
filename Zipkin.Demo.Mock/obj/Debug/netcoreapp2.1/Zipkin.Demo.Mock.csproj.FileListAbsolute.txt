@@ -1,0 +1,11 @@
+C:\ws\git\Zipkin.Demo\Zipkin.Demo.Mock\bin\Debug\netcoreapp2.1\Zipkin.Demo.Mock.deps.json
+C:\ws\git\Zipkin.Demo\Zipkin.Demo.Mock\bin\Debug\netcoreapp2.1\Zipkin.Demo.Mock.runtimeconfig.json
+C:\ws\git\Zipkin.Demo\Zipkin.Demo.Mock\bin\Debug\netcoreapp2.1\Zipkin.Demo.Mock.runtimeconfig.dev.json
+C:\ws\git\Zipkin.Demo\Zipkin.Demo.Mock\bin\Debug\netcoreapp2.1\Zipkin.Demo.Mock.dll
+C:\ws\git\Zipkin.Demo\Zipkin.Demo.Mock\bin\Debug\netcoreapp2.1\Zipkin.Demo.Mock.pdb
+C:\ws\git\Zipkin.Demo\Zipkin.Demo.Mock\obj\Debug\netcoreapp2.1\Zipkin.Demo.Mock.csprojAssemblyReference.cache
+C:\ws\git\Zipkin.Demo\Zipkin.Demo.Mock\obj\Debug\netcoreapp2.1\Zipkin.Demo.Mock.csproj.CoreCompileInputs.cache
+C:\ws\git\Zipkin.Demo\Zipkin.Demo.Mock\obj\Debug\netcoreapp2.1\Zipkin.Demo.Mock.AssemblyInfoInputs.cache
+C:\ws\git\Zipkin.Demo\Zipkin.Demo.Mock\obj\Debug\netcoreapp2.1\Zipkin.Demo.Mock.AssemblyInfo.cs
+C:\ws\git\Zipkin.Demo\Zipkin.Demo.Mock\obj\Debug\netcoreapp2.1\Zipkin.Demo.Mock.dll
+C:\ws\git\Zipkin.Demo\Zipkin.Demo.Mock\obj\Debug\netcoreapp2.1\Zipkin.Demo.Mock.pdb

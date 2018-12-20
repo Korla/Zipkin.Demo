@@ -1,0 +1,11 @@
+C:\ws\git\zipkin\bin\Debug\netcoreapp2.1\zipkin.deps.json
+C:\ws\git\zipkin\bin\Debug\netcoreapp2.1\zipkin.runtimeconfig.json
+C:\ws\git\zipkin\bin\Debug\netcoreapp2.1\zipkin.runtimeconfig.dev.json
+C:\ws\git\zipkin\bin\Debug\netcoreapp2.1\zipkin.dll
+C:\ws\git\zipkin\bin\Debug\netcoreapp2.1\zipkin.pdb
+C:\ws\git\zipkin\obj\Debug\netcoreapp2.1\zipkin.csprojAssemblyReference.cache
+C:\ws\git\zipkin\obj\Debug\netcoreapp2.1\zipkin.csproj.CoreCompileInputs.cache
+C:\ws\git\zipkin\obj\Debug\netcoreapp2.1\zipkin.AssemblyInfoInputs.cache
+C:\ws\git\zipkin\obj\Debug\netcoreapp2.1\zipkin.AssemblyInfo.cs
+C:\ws\git\zipkin\obj\Debug\netcoreapp2.1\zipkin.dll
+C:\ws\git\zipkin\obj\Debug\netcoreapp2.1\zipkin.pdb
