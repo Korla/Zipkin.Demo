@@ -1,8 +1,8 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
+﻿using Microsoft.Extensions.Logging;
 using Serilog;
 using Serilog.Sinks.Elasticsearch;
 using System;
+using Serilog.Extensions.Logging;
 
 namespace zipkin
 {
@@ -10,6 +10,7 @@ namespace zipkin
   {
     static void Main(string[] args)
     {
+      // Configure Serilog
       var log = new LoggerConfiguration()
         .Enrich.FromLogContext()
         .WriteTo.Console()
@@ -21,13 +22,15 @@ namespace zipkin
         })
         .CreateLogger();
       Log.Logger = log;
-      var serviceCollection = new ServiceCollection();
-      serviceCollection.AddLogging(c => c.AddSerilog());
-      var serviceProvider = serviceCollection.BuildServiceProvider();
-      var logger = serviceProvider.GetService<Microsoft.Extensions.Logging.ILogger<Program>>();
+
+      // Configure Microsoft.Logging
+      var loggerFactory = new LoggerFactory(new[] { new SerilogLoggerProvider() });
+      var logger = loggerFactory.CreateLogger<Program>();
+
+      // Run application
       using (logger.BeginScope("{@scope}", new { value1 = "A value", value2 = "Another value" }))
       {
-        logger.LogInformation("A Microsoft log");
+        logger.LogInformation("A log");
       }
       Log.CloseAndFlush();
     }
